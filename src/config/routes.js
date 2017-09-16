@@ -18,7 +18,7 @@ router.route('/festivals')
 
 
 // users routes
-router.route('/signup')
+router.route('/loginNew')
   .get(usersController.getSignup)
   .post(usersController.postSignup);
 

@@ -11,7 +11,8 @@ let FestivalSchema = new Schema({
   when: String,
   url: String,
   workshops: Boolean,
-  ravelryGroup: String,   // TODO: not implemented
+  entranceFee: Boolean,
+  ravelryGroup: String,
   nearestAirport: String, // TODO: not implemented
   animalShows: [String],  // TODO: not implemented
 });

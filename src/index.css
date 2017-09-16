@@ -1,0 +1,87 @@
+
+body {
+  background-color: #d5dadf;
+  color: #2a4857;
+  font: 20px 'Alegreya Sans', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #2e2e3d;
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+.container {
+  margin: 20px;
+}
+
+.logo {
+  width: 150px;
+}
+
+.button-container {
+  margin: 55px 0;
+}
+
+.signin-container {
+  margin: 60px 0;
+}
+
+.button {
+  color: #d5dadf;
+  background: #2a4857;
+  border: none;
+  font-size: 16px;
+  border-radius: 3px;
+  width: 200px;
+  text-align: center;
+  display: block;
+  padding: 7px 0;
+  margin: 10px auto;
+}
+
+.button:hover:enabled {
+  background: linear-gradient(#2e2e3d,#2a4857);
+  color: #fff;
+  text-decoration: none;
+}
+
+.button:active {
+  transform: translateY(1px);
+}
+
+.filters {
+  display: flex;
+  justify-content: center;
+}
+
+.filters li {
+  margin: 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/*
+.festival-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+*/
+
+.festival-item {
+  margin: 20px;
+}
+
+
+.space-list-items {
+  margin-bottom: 7px;
+}
+
