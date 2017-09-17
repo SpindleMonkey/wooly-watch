@@ -14,7 +14,13 @@ module.exports = {
     rules: [
       { test: /\.(js)$/, use: 'babel-loader' },
       { test: /\.css$/, use: [ 'style-loader', 'css-loader' ] },
-      { test: /\.svg$/, use: [ 'babel-loader', 'react-svg-loader' ] } 
+      { test: /\.(png|svg|jpg|gif)$/, use: [ 'file-loader' ] }
+    ],
+    loaders: [
+      {
+        test: /\.(png|jpg|svg)$/,
+        loader: 'url?limit=25000'
+      }
     ]
   },
   devServer: {
