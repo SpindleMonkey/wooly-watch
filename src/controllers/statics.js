@@ -11,14 +11,14 @@ function home(req, res) {
   res.render('index');
 }
 
-// GET /inventory
-function festivals(req, res) {
-  console.log('/inventory');
-  res.render('inventory');
-}
+// GET /festival
+// function festivals(req, res) {
+//   console.log('/festivals');
+//   res.render('festival');
+// }
 
 
 module.exports = {
   home: home,
-  festivals: festivals
+  // festivals: festivals
 };

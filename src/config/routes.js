@@ -8,12 +8,24 @@ let usersController = require('../controllers/users');
 let apisController = require('../controllers/apis');
 
 
+function authenticatedUser(req, res, next) {
+  // if the user is authenticated, we continue execution
+  if (req.isAuthenticated()) return next();
+
+  // otherwise the request is redirected to the home page
+  res.redirect('/');
+}
+
 // static routes
 router.route('/')
   .get(staticsController.home);
 
 router.route('/festivals')
   .get(staticsController.festivals);
+
+router.route('/admin')
+  .get(authenticatedUser, usersController.admin);
+
 
 
 
@@ -44,7 +56,7 @@ router.route('/api/user/visited/:id')
 router.route('/api/user/wishlist')
   .post(apisController.apiNewWishlist);
 
-router.route('/api/user/wishist/:id')
+router.route('/api/user/wishlist/:id')
   .delete(apisController.apiDeleteWishlist);
 
 

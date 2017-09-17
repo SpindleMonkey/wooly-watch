@@ -40,6 +40,12 @@ function getLogout(request, response, next) {
   response.redirect('/');
 }
 
+// Restricted page
+function admin(request, response){
+  response.redirect('/admin');
+}
+
+
 module.exports = {
   getLogin: getLogin,
   postLogin: postLogin ,

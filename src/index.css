@@ -10,6 +10,11 @@ a {
   color: #2e2e3d;
 }
 
+a:hover {
+  color: #75a1a6;
+  font-weight: bold;
+}
+
 ul {
   padding: 0;
 }
@@ -24,6 +29,10 @@ li {
 
 .logo {
   width: 150px;
+}
+
+.logo-container {
+  margin: 10px auto;
 }
 
 .button-container {
@@ -49,15 +58,22 @@ li {
   display: block;
   padding: 7px 0;
   margin: 10px auto;
+  cursor: pointer;
 }
 
-.button:hover:enabled {
+.buttonHorz {
+  padding: 7px 20px;
+  margin: 0 5px;
+  display: inline;
+}
+
+.button:hover:enabled, .buttonHorz:hover:enabled {
   background: linear-gradient(#2e2e3d,#2a4857);
   color: #fff;
   text-decoration: none;
 }
 
-.button:active {
+.button:active, .buttonHorz:active {
   transform: translateY(1px);
 }
 

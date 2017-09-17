@@ -7,10 +7,11 @@ var Switch = ReactRouter.Switch;
 var Home = require('./Home');
 var Signin = require('./Signin');
 var Signup = require('./Signup');
-var Festivals = require('./Festivals');
+var UsFestivals = require('./UsFestivals');
 var Dashboard = require('./Dashboard');
 var Visited = require('./Visited');
 var Wishlist = require('./Wishlist');
+var Admin = require('./Admin');
 
 class App extends React.Component {
   render() {
@@ -21,10 +22,11 @@ class App extends React.Component {
             <Route exact path='/' component={Home} />
             <Route path='/signin' component={Signin} />
             <Route path='/signup' component={Signup} />
-            <Route path='/festivals' component={Festivals} />
+            <Route path='/festivals' component={UsFestivals} />
             <Route path='/dashboard' component={Dashboard} />
             <Route path='/visited' component={Visited} />
             <Route path='/wishlist' component={Wishlist} />
+            <Route path='/admin' component={Admin} />
             <Route render={function() {
               return (<p>Not found.</p>)
             }} />

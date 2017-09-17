@@ -11,6 +11,7 @@ let User = new Schema({
     email: String,
     password: String,    
   },
+  admin: Boolean,
   avatar: String,
   visited: [Festival.schema],
   wishlist: [Festival.schema],  // TODO: not implemented

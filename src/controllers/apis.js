@@ -12,7 +12,7 @@ const db = require('../models');
 // GET /api/user
 function apiUser(req, res) {
   console.log('GET /api/user');
-  // console.log('req.user: ' + req.user);
+  console.log('req.user: ' + req.user);
   if (req.user) {
     db.User.find({'_id': req.user._id}, function(err, users) {
       if (err) {
@@ -71,11 +71,9 @@ function apiNewWishlist(req, res) {
   console.log('POST /api/user/wishlist');
   // console.log('req.user: ' + req.user);
   // console.log('req.body: ' + req.body);
-  // console.log('req.body.item: ' + req.body.item);
   if (req.user) {
     //console.log('there is a user');
     // console.log(req.user._id);
-    // console.log(newStash);
     db.User.update({_id: req.user._id}, { $push: {wishlist: req.body} }, function(err, updatedUser) {
       if (err) {
         // console.log('err during update');
@@ -153,7 +151,6 @@ function apiIndex(req, res) {
 // GET /api/festival/all      all the info for all the festivals
 function apiShowAll(req, res) {
   //console.log('GET /api/festival/all');
-  // return JSON object of specified festival
   db.Festival.find({}, function(err, allFestivals) {
     if (err) {
       res.send('ERROR::' + err);

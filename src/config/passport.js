@@ -50,6 +50,12 @@ module.exports = function(passport) {
         let newUser = new User();
         newUser.local.email = email;
         newUser.local.password = newUser.makeHash(password);
+        if (email == 'conk@wildbeans.com') {
+          newUser.admin = true;
+        }
+        else {
+          newUser.admin = false;          
+        }
         // newUser.avatar = avatars[getRandom(0, 6)];
 
         newUser.save(function(err) {

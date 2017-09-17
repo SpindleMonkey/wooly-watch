@@ -12,7 +12,7 @@ class Dashboard extends React.Component {
           <Logo />
           <div className='col dashboard-container'>
             <h2>Welcome!</h2>
-            <Link className='button' to='/festivals'>
+            <Link className='button' to='/festivals' >
               All festivals
             </Link>
             <Link className='button' to='/visited'>
@@ -20,7 +20,7 @@ class Dashboard extends React.Component {
             </Link>
             <Link className='button' to='/wishlist'>
               Festival wishlist
-            </Link>d 
+            </Link> 
           </div>
         </div>
       </div>
