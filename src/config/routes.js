@@ -18,15 +18,15 @@ router.route('/festivals')
 
 
 // users routes
-router.route('/loginNew')
+router.route('/user/loginNew')
   .get(usersController.getSignup)
   .post(usersController.postSignup);
 
-router.route('/login')
+router.route('/user/login')
   .get(usersController.getLogin)
   .post(usersController.postLogin);
 
-router.route('/logout')
+router.route('/user/logout')
   .get(usersController.getLogout);
 
 

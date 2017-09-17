@@ -13,7 +13,7 @@ class Signup extends React.Component {
           <div className='col signin-container'>
             <h2>Sign Up!</h2>
             <p>WoolyWatch accounts are free. Use your email address to get an account, but don't worry, we won't use your email address for evil of any kind. Really.</p>
-            <SignInUpForm action='/signup' button='sign up' />
+            <SignInUpForm action='/user/loginNew' button='sign up' />
           </div>
         </div>
       </div>

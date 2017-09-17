@@ -8,6 +8,9 @@ var Home = require('./Home');
 var Signin = require('./Signin');
 var Signup = require('./Signup');
 var Festivals = require('./Festivals');
+var Dashboard = require('./Dashboard');
+var Visited = require('./Visited');
+var Wishlist = require('./Wishlist');
 
 class App extends React.Component {
   render() {
@@ -19,6 +22,9 @@ class App extends React.Component {
             <Route path='/signin' component={Signin} />
             <Route path='/signup' component={Signup} />
             <Route path='/festivals' component={Festivals} />
+            <Route path='/dashboard' component={Dashboard} />
+            <Route path='/visited' component={Visited} />
+            <Route path='/wishlist' component={Wishlist} />
             <Route render={function() {
               return (<p>Not found.</p>)
             }} />

@@ -12,7 +12,7 @@ class Signin extends React.Component {
           <Logo />
           <div className='col signin-container'>
             <h2>Sign In!</h2>
-            <SignInUpForm action='/login' button='sign in' />
+            <SignInUpForm action='/user/login' button='sign in' />
           </div>
         </div>
       </div>
