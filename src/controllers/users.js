@@ -42,7 +42,11 @@ function getLogout(request, response, next) {
 
 // Restricted page
 function admin(request, response){
-  response.redirect('/admin');
+  if (request.user.admin) {
+    response.redirect('/admin');    
+  } else {
+    response.redirect('/');
+  }
 }
 
 
@@ -51,5 +55,6 @@ module.exports = {
   postLogin: postLogin ,
   getSignup: getSignup,
   postSignup: postSignup,
-  getLogout: getLogout
+  getLogout: getLogout,
+  admin: admin
 };

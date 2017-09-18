@@ -14,6 +14,7 @@ class FestivalList extends React.Component {
         <Festival
           key={festival._id}
           festival={festival}
+          listType={this.props.listType}
           onAddVisited={this.props.onAddVisited}
           onRemoveVisited={this.props.onRemoveVisited}
           onAddWishlist={this.props.onAddWishlist}

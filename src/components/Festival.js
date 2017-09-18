@@ -1,6 +1,7 @@
 var React = require('react');
 
 function UserButtons(props) {
+  console.log('props: ' + props);
   console.log('props: ' + props.listType);
   if (props.listType == 'visitedList') {
     return (
@@ -60,7 +61,16 @@ class Festival extends React.Component {
           <li>
             <h2>
               <a href={this.props.festival.url} target='_blank'>{this.props.festival.name}</a>&nbsp;&nbsp;&nbsp;&nbsp;
-              <UserButtons />
+              <span 
+                className='button buttonHorz'
+                onClick={() => this.props.onAddVisited(this.props.festival)}>
+                Visited
+              </span>
+              <span 
+                className='button buttonHorz'
+                onClick={() => this.props.onAddWishlist(this.props.festival)}>
+                Wishlist
+              </span>
             </h2>
           </li>
           <li>a/k/a {this.props.festival.aliases}</li>

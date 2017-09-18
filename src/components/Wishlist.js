@@ -47,7 +47,7 @@ class Wishlist extends React.Component {
   render() {
     return (
       <div>
-        <h1>My Wish LIst of Wool Festivals</h1>
+        <h1>My Wish List of Wool Festivals</h1>
         {!this.state.festivals
           ? <p> ...loading... </p>
           : <FestivalList 

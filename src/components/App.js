@@ -11,6 +11,7 @@ var UsFestivals = require('./UsFestivals');
 var Dashboard = require('./Dashboard');
 var Visited = require('./Visited');
 var Wishlist = require('./Wishlist');
+var Calendar = require('./Calendar');
 var Admin = require('./Admin');
 
 class App extends React.Component {
@@ -26,6 +27,7 @@ class App extends React.Component {
             <Route path='/dashboard' component={Dashboard} />
             <Route path='/visited' component={Visited} />
             <Route path='/wishlist' component={Wishlist} />
+            <Route path='/calendar' component={Calendar} />
             <Route path='/admin' component={Admin} />
             <Route render={function() {
               return (<p>Not found.</p>)

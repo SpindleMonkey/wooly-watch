@@ -100,7 +100,7 @@ module.exports = {
   updateWishlist: function(festival, id) {
     return axios.post('/api/user/wishlist', festival)
       .then(function(response) {
-        console.log('festival added to wishist');
+        console.log('festival added to wishlist');
       })
       .catch(function(error) {
         console.log(error);

@@ -15,6 +15,9 @@ class Dashboard extends React.Component {
             <Link className='button' to='/festivals' >
               All festivals
             </Link>
+            <Link className='button' to='/calendar' >
+              Calendar of festivals
+            </Link>
             <Link className='button' to='/visited'>
               Visited festivals
             </Link>
