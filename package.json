@@ -5,6 +5,7 @@
   "scripts": {
     "start": "webpack-dev-server --open"
   },
+  "proxy": "http://localhost:3000",
   "babel": {
     "presets": [
       "env",

@@ -8,13 +8,13 @@ let usersController = require('../controllers/users');
 let apisController = require('../controllers/apis');
 
 
-function authenticatedUser(req, res, next) {
-  // if the user is authenticated, we continue execution
-  if (req.isAuthenticated()) return next();
+// function authenticatedUser(req, res, next) {
+//   // if the user is authenticated, we continue execution
+//   if (req.isAuthenticated()) return next();
 
-  // otherwise the request is redirected to the home page
-  res.redirect('/');
-}
+//   // otherwise the request is redirected to the home page
+//   res.redirect('/');
+// }
 
 // static routes
 router.route('/')
@@ -24,7 +24,8 @@ router.route('/festivals')
   .get(staticsController.festivals);
 
 router.route('/admin')
-  .get(authenticatedUser, usersController.admin);
+  // .get(authenticatedUser, usersController.admin);
+  .get(usersController.admin);
 
 
 

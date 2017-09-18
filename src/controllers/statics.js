@@ -12,13 +12,13 @@ function home(req, res) {
 }
 
 // GET /festival
-// function festivals(req, res) {
-//   console.log('/festivals');
-//   res.render('festival');
-// }
+function festivals(req, res) {
+  console.log('/festivals');
+  res.render('festival');
+}
 
 
 module.exports = {
   home: home,
-  // festivals: festivals
+  festivals: festivals
 };
