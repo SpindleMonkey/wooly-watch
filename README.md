@@ -13,11 +13,11 @@ If you create an account, you can save festivals you've visited, find festivals 
 
 ## Wireframes
 
-[Sign In](assets/IMG_7041.JPG)
-[Map](assets/IMG_7042.JPG)
-[Festival](assets/IMG_7043.JPG)
-[Visited Festivals](assets/IMG_7044.JPG)
-[Search Results](assets/IMG_7045.JPG)
+![Sign In](assets/IMG_7041.JPG)
+![Map](assets/IMG_7042.JPG)
+![Festival](assets/IMG_7043.JPG)
+![Visited Festivals](assets/IMG_7044.JPG)
+![Search Results](assets/IMG_7045.JPG)
 
 
 ## Stretch Goals
