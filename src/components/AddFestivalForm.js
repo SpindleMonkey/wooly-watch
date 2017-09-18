@@ -2,6 +2,30 @@ var React = require('react');
 
 class AddFestivalForm extends React.Component {
 
+  constructor(props) {
+    super(props);
+    this.state = {
+      selectedWorkshops: 'yes',
+      selectedFee: 'no'
+    };
+
+    this.handleWorkshopChange = this.handleWorkshopChange.bind(this);
+    this.handleFeeChange = this.handleFeeChange.bind(this);
+  }
+
+  handleWorkshopChange(changeEvent) {
+    this.setState(prevState => ({
+      selectedWorkshops: (prevState.selectedWorkshops == 'yes') ? 'no' : 'yes'
+    }))
+  }
+
+  handleFeeChange(changeEvent) {
+    this.setState(prevState => ({
+      selectedFee: (prevState.selectedFee == 'yes') ? 'no' : 'yes'
+    }))
+  }
+
+
   render() {
     return (
       <form method='post' action='/api/festival'>
@@ -35,17 +59,29 @@ class AddFestivalForm extends React.Component {
         </div>
         <div className='form-group'>
           <label htmlFor='workshops'>Workshops?</label>
-          <label className="radio">
-            <input type="radio" name="workshopsYes" id="workshopsYes" value="yes" /> yes
+          <label className='radio'>
+            <input type="radio" name="workshopsYes" id="workshopsYes" value="yes" 
+            checked={this.state.selectedWorkshops == 'yes'}
+            onChange={this.handleWorkshopChange}/> yes
           </label>
-          <label className="radio">
-            <input type="radio" name="workshopsNo" id="workshopsNo" value="no" /> no
+          <label className='radio'>
+            <input type="radio" name="workshopsNo" id="workshopsNo" value="no" 
+            checked={this.state.selectedWorkshop == 'no'}
+            onChange={this.handleWorkshopChange}/> no
           </label>
         </div>
         <div className='form-group'>
           <label htmlFor='entranceFee'>Entrance fee</label>
-            <input type="radio" name="feeYes" id="feeYes" value="yes" /> yes
-            <input type="radio" name="feeNo" id="feeNo" value="no" /> no
+          <label className='radio'>
+            <input type="radio" name="feeYes" id="feeYes" value="yes" 
+            checked={this.state.selectedFee == 'yes'}
+            onChange={this.handleFeeChange}/> yes
+          </label>
+          <label className='radio'>
+            <input type="radio" name="feeNo" id="feeNo" value="no" 
+            checked={this.state.selectedFee == 'no'}
+            onChange={this.handleFeeChange}/> no
+          </label>
         </div>
         <input className='button' type='submit' value='add festival' />
       </form>
@@ -53,5 +89,8 @@ class AddFestivalForm extends React.Component {
   }
 
 }
+
+
+
 
 module.exports = AddFestivalForm;
