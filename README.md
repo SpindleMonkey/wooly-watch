@@ -39,15 +39,19 @@ Future additions:
 
 ![ERD](assets/ERD.JPG)
 
-Axios caches data by default, which is nice enough, but I haven't figured out, yet,  how to override that default so I can sort festival data by region, state.
+BUG: Axios caches data by default, which is nice enough, but I haven't figured out, yet, how to override that default so I can sort festival data by region, state. Currently, you have to click the filter twice.
 
 
 ## Installation
 
 ### Heroku
+[https://ancient-gorge-96585.herokuapp.com/](https://ancient-gorge-96585.herokuapp.com/)
 
 ### Local Install
-
+* Start the Mongo DB: mongod
+* Seed the DB: node seed.js
+* Start the server: node src/server.js
+* Start the front end: npm run start
 
 ## Technology
 
