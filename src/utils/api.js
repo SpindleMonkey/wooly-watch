@@ -10,7 +10,7 @@ function compareState(a,b) {
 }
 
 function compareRegion(a,b) {
-  console.log(a.region);
+  // console.log(a.region);
   if (a.region < b.region)
     return -1;
   if (a.region > b.region)
@@ -19,7 +19,7 @@ function compareRegion(a,b) {
 }
 
 function compareMonth(a,b) {
-  console.log(a.when);
+  // console.log(a.when);
   if (a.when < b.when)
     return -1;
   if (a.when > b.when)
@@ -46,7 +46,7 @@ module.exports = {
         console.log(response);
         switch (filter) {
           case 'By State':
-            console.log(response.data.festivals);
+            // console.log(response.data.festivals);
             response.data.festivals.sort(compareState);
             break;
 

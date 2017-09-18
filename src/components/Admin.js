@@ -1,10 +1,16 @@
 var React = require('react');
 
+var AddFestivalForm = require('./AddFestivalForm');
+
+
 class Admin extends React.Component {
 
   render() {
     return (
-      <h1>Admin</h1>
+      <div className='container'>
+        <h1>Add New Festival</h1>
+        <AddFestivalForm />
+      </div>
     )
   }
 

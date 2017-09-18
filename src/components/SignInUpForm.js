@@ -14,7 +14,7 @@ class SignInUpForm extends React.Component {
           <label htmlFor='password'>Password</label>
           <input className='form-control' type='password' name='password' id='password' required />
         </div>
-        <input className='btn btn-primary btn-block btn-large active' type='submit' value={this.props.button} />
+        <input className='button' type='submit' value={this.props.button} />
       </form>
     )
   }
