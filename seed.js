@@ -176,14 +176,14 @@ let festivalList = [
 // remove all documents from the current Breed collection 
 // and repopulate with the list of breeds in breedList
 db.Festival.remove({}, function(err, festivals){
-  console.log('after Festival.remove');
+  // console.log('after Festival.remove');
   if (err) { return console.log('ERROR::' + err); }
   festivalList.forEach(function(festivalName) {
-    console.log('inside forEach');
+    // console.log('inside forEach');
 
     db.Festival.create(festivalName, function(err, theFestival) {
        if (err) { return console.log('ERROR::' + err); }
-       console.log('saved ' + theFestival);
+       // console.log('saved ' + theFestival);
      });
   });
 });

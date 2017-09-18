@@ -11,8 +11,8 @@ const db = require('../models');
 
 // GET /api/user
 function apiUser(req, res) {
-  console.log('GET /api/user');
-  console.log('req.user: ' + req.user);
+  // console.log('GET /api/user');
+  // console.log('req.user: ' + req.user);
   if (req.user) {
     db.User.find({'_id': req.user._id}, function(err, users) {
       if (err) {
@@ -28,7 +28,7 @@ function apiUser(req, res) {
 
 // POST /api/user/visited
 function apiNewVisited(req, res) {
-  console.log('POST /api/user/visited');
+  // console.log('POST /api/user/visited');
   // console.log('req.user: ' + req.user);
   // console.log('req.body: ' + req.body);
   // console.log('req.body.item: ' + req.body.item);
@@ -50,9 +50,9 @@ function apiNewVisited(req, res) {
 
 // DELETE /api/user/visited/:id
 function apiDeleteVisited(req, res) {
-  console.log('DELETE. /api/user/visited/:id');
-  console.log('req.params.id: ' + req.params.id);
-  console.log('req.user._id: ' + req.user._id);
+  // console.log('DELETE. /api/user/visited/:id');
+  // console.log('req.params.id: ' + req.params.id);
+  // console.log('req.user._id: ' + req.user._id);
   // we need to remove it from the user's visited list
   db.User.findByIdAndUpdate({ _id: req.user._id },
       { $pull: { visited: { _id: req.params.id } } }, 
@@ -60,7 +60,7 @@ function apiDeleteVisited(req, res) {
     if (err) {
       res.status(404).send('could not remove that item from the visited list');
     } else {
-      console.log(res);
+      // console.log(res);
       res.json(updatedUser);
     }
   });
@@ -68,7 +68,7 @@ function apiDeleteVisited(req, res) {
 
 // POST /api/user/wishlist
 function apiNewWishlist(req, res) {
-  console.log('POST /api/user/wishlist');
+  // console.log('POST /api/user/wishlist');
   // console.log('req.user: ' + req.user);
   // console.log('req.body: ' + req.body);
   if (req.user) {
@@ -88,9 +88,9 @@ function apiNewWishlist(req, res) {
 
 // DELETE /api/user/wishlist/:id
 function apiDeleteWishlist(req, res) {
-  console.log('DELETE. /api/user/wishlist/:id');
-  console.log('req.params.id: ' + req.params.id);
-  console.log('req.user._id: ' + req.user._id);
+  // console.log('DELETE. /api/user/wishlist/:id');
+  // console.log('req.params.id: ' + req.params.id);
+  // console.log('req.user._id: ' + req.user._id);
   // we need to remove it from the user's wish list
   db.User.findByIdAndUpdate({ _id: req.user._id },
       { $pull: { wishlist: { _id: req.params.id } } }, 
@@ -98,7 +98,7 @@ function apiDeleteWishlist(req, res) {
     if (err) {
       res.status(404).send('could not remove that item from the wish list');
     } else {
-      console.log(res);
+      // console.log(res);
       res.json(updatedUser);
     }
   });

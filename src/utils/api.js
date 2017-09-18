@@ -2,10 +2,15 @@ var axios = require('axios');
 
 function compareState(a,b) {
   console.log(a.state);
-  if (a.state < b.state)
+  if (a.state < b.state) {
+    console.log('a<b: ' + a.state + ', ' + b.state);
     return -1;
-  if (a.state > b.state)
+  }
+  if (a.state > b.state) {
+    console.log('a>b: ' + a.state + ', ' + b.state);
     return 1;
+  }
+  console.log('a==b: ' + a.state + ', ' + b.state);
   return 0;
 }
 
@@ -46,7 +51,7 @@ module.exports = {
         console.log(response);
         switch (filter) {
           case 'By State':
-            // console.log(response.data.festivals);
+            console.log(response.data.festivals);
             response.data.festivals.sort(compareState);
             break;
 
