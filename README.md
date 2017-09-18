@@ -3,7 +3,7 @@
 
 ## Overview
 
-INCLUDE SCREENSHOT OF THE APP HERE!!!
+![App Home Page](assets/appHome.png)
 
 WoolyWatch is an app that lists all known wool festivals in the US, and keeps track of which festivals you've visited. The entire list of festivals is available without logging in.
 
@@ -13,11 +13,11 @@ If you create an account, you can save festivals you've visited, find festivals 
 
 ## Wireframes
 
-![ERD](assets/IMG_7041.JPG)
-![ERD](assets/IMG_7042.JPG)
-![ERD](assets/IMG_7043.JPG)
-![ERD](assets/IMG_7044.JPG)
-![ERD](assets/IMG_7045.JPG)
+[Sign In](assets/IMG_7041.JPG)
+[Map](assets/IMG_7042.JPG)
+[Festival](assets/IMG_7043.JPG)
+[Visited Festivals](assets/IMG_7044.JPG)
+[Search Results](assets/IMG_7045.JPG)
 
 
 ## Stretch Goals
